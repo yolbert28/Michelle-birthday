@@ -11,12 +11,15 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Courgette&family=Domine:wght@400..700&display=swap" rel="stylesheet">
 		<meta name="generator" content={Astro.generator} />
 		<title>{ title }</title>
 	</head>
-	<body class="bg-primary-gray flex items-center flex-col text-text-gray">
+	<body class="bg-bg-brown flex items-center flex-col text-text-gray">
 		<Header/>
-		<main class="w-full flex flex-col items-center ">
+		<main class=" w-full flex flex-col items-center overflow-x-hidden">
 			<slot />
 		</main>
 		<Footer/>
@@ -26,6 +29,7 @@ const { title } = Astro.props;
 <style>
 	html,
 	body {
+		font-family: "Courgette", serif;
 		margin: 0;
 		width: 100%;
 		height: 100%;

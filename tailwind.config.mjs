@@ -3,12 +3,11 @@ export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		colors: {
-		'primary-gray': '#0E0E11',
-		'secondary-gray': '#373843',
-		'tertiary-gray': '#595A7033',
-		'text-gray': '#D7D8E0',
-		'primary-blue': '#1064FF',
-		'secondary-blue': '#D7EAFF',
+		'primary-brown': '#66472f',
+		'secondary-brown': '#9f836e',
+		'tertiary-brown': '#c0b6a5',
+		'forty-brown': '#bc9e88',
+		'bg-brown': '#fde2ce',
 		},
 		extend: {},
 	},
