@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
 ---
 
 <Layout title="Happy bithday">
@@ -32,19 +33,35 @@ import Layout from '../layouts/Layout.astro';
 		<p class="w-[80%] z-10 text-center">
 			Ya está terminando el año y una de las mejores cosas que ocurrió en él fue conocerte. Eres una mujer increíble, divertida, trabajadora, jodedora y sobre todo una excelente amiga. Gracias por enseñarme a bailar, por enseñarme a ser más relajado, por regalarme tan buenos momentos a tu lado y espero que este nuevo año traiga muchísimos más.
 		</p>
-		<img id="pastel" class="w-[90%] mt-10 mb-16 z-30" src="./pintura.png" alt="">
-		<p class="text-4xl text-center">Te amo muchisimo Negrita</p>
-		<img src="./torta.png" alt="">
+		<img class="w-[90%] mt-10 mb-16 z-30" src="./pintura.png" alt="">
+		<p class="text-4xl text-center">Te amo muchisimo Negrita ❤️</p>
+		<!-- <p class="w-[80%] mt-10 z-10 text-center">
+			Pero no vine a felicitarte solo, sino que tambien vienen un par de personitas especiales a dejarte un mensaje.
+		</p> -->
+		<!-- <div class="w-[80%] h-[400px] mt-8 bg-[#fff] z-30 flex flex-col items-center mb-14" style="box-shadow: 2px -2px 10px rgba(26, 26, 26, 0.295);">
+			<img class="w-[80%] h-64 object-cover mt-7" src="main.jpeg" alt="">
+			<p class=" text-center mt-5">Una foto con la Cumpleañera</p>
+		</div> -->
+		<div id="pastel">
+			<img src="./torta.png" alt="">
+		</div>
 		
 	</div>
 	
 </Layout>
 <script>
+	import confetti from '../../node_modules/canvas-confetti';
+
 	let pastel = document.getElementById('pastel');
+
+	setTimeout(() => {
+		confetti();
+	}, 1000);
 
 	if(pastel)
 		pastel.addEventListener('click', () => {
-			console.log('click');
-			// confetti();
+			confetti();
 		});
+	else 
+		console.log('no hay pastel');
 </script>
